@@ -1,27 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: Outfit;
   scroll-behavior: smooth;
 }
-body{
+body {
   min-height: 100vh;
+  background-color: var(--body-background);
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
-.app{
+.app {
   width: 80%;
   margin: auto;
 }
+/* Body  */
+.light-theme{
+  --body-background: white;
+}
+.dark-theme{
+  --body-background: rgb(21, 32, 43);
+}
+
+/* Navbar  */
+.light-theme {
+  --light-background: #fff4f2;
+  --ligth-boxshadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  --light-text: #49557e;
+}
+.dark-theme {
+  --light-background: rgb(21, 32, 43);
+  --ligth-boxshadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  --light-text: #fff;
+}
+/* Header  */
+.light-theme {
+  --header-text: #191b21;
+}
+.dark-theme {
+  --header-text: #fff;
+}
+/* Explore Menu  */
+.light-theme {
+  --exlpore-text-h1: #24272e;
+  --exlpore-text: #515151;
+}
+.dark-theme {
+  --exlpore-text-h1: #fff;
+  --exlpore-text: #828282;
+}
+/* Cart  */
+.light-theme {
+  --cart-input: #bababa;
+  --exlpore-text: #515151;
+  --cart-button: rgb(17, 16, 16);
+}
+.dark-theme {
+  --cart-input: #f0eaea;
+  --exlpore-text: #828282;
+  --cart-button: tomato;
+}
+/* Login Popup  */
+.light-theme {
+  --login-background: white;
+  --login-text: #515151;
+  --cart-button: rgb(17, 16, 16);
+}
+.dark-theme {
+  --login-background: rgba(23, 33, 44);
+  --login-text: #828282;
+  --cart-button: tomato;
+}
+
+
 @keyframes fadeIn {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }

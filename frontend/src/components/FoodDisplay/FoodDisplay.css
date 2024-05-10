@@ -4,6 +4,9 @@
 .food-display h2{
     font-size: max(2vw,24px);
     font-weight: 600;
+    color: var(--exlpore-text-h1);
+    text-align: center;
+    margin-bottom: 10px;
 }
 .food-display-list{
     display: grid;

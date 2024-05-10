@@ -12,7 +12,8 @@
 .place-order-left .title{
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
+    color: var(--header-text);
 }
 .place-order-left input{
     margin-bottom: 15px;
@@ -32,4 +33,13 @@
 }
 .place-order .cart-total button{
     margin-top: 30px;
+}
+@media (max-width:750px) {
+    .place-order{
+        display: inline;
+    }
+    .place-order-left .title{
+        margin: 10px 0px 30px 0px;
+    }
+    
 }

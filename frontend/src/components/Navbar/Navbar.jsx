@@ -1,9 +1,22 @@
-import React,{useState,useContext} from 'react'
+import React,{useState,useContext,useEffect} from 'react'
 import "./Navbar.css"
 import {assets} from '../../assets/assets'
 import { Link } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 const Navbar = ({setShowLogin}) => {
+
+  const [theme, setTheme] = useState("light-theme");
+  useEffect(() => {
+   document.body.className = theme;
+  }, [theme]);
+
+  const toggelTheme = ()=>{
+    if(theme === 'dark-theme'){
+      setTheme('light-theme')
+    }else{
+      setTheme('dark-theme')
+    }
+  }
 
   const [menu, setMenu] = useState("home");
 
@@ -25,6 +38,9 @@ const Navbar = ({setShowLogin}) => {
             <div className={getTotalCartAmount()===0?"":"dot"}></div>
         </div>
         <button onClick={()=>setShowLogin(true)}>sing in</button>
+        <div className='dark-mode'>
+      <i className="fa-solid fa-moon" onClick={toggelTheme}></i>
+      </div>
       </div>
     </div>
   )
